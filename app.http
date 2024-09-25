@@ -1,0 +1,64 @@
+
+### 1. User Registration
+POST http://localhost:3000/register 
+Content-Type: application/json  
+
+{
+    "username": "test",
+    "email": "test@gamil.com",
+    "password": "sdfff"
+}
+
+### 2. User Login
+POST http://localhost:3000/login
+Content-Type: application/json  
+
+{
+    "email": "test@gamil.com",
+    "password": "sdfff"
+}
+
+### 3. Fetch User Profile
+GET http://localhost:3000/profile 
+Authorization: Bearer token..  
+
+### 4. Update User Profile
+PUT http://localhost:3000/profile
+Content-Type: application/json  
+Authorization: Bearer token.. 
+
+{
+    "username": "testing",
+    "email": "testingupdate@example.com",
+    "password": "newpassword123"
+}
+
+### 5. Add a New Todo
+POST http://localhost:3000/todos 
+Content-Type: application/json  
+Authorization: Bearer token..  
+
+{
+    "todo": "My First Todo",
+    "status": "pending"
+}
+
+### 6. Fetch All Todos
+GET http://localhost:3000/todos  
+Authorization: Bearer token..  
+
+### 7. Update a Todo
+PUT http://localhost:3000/todos/454115a6-1bf0-4f27-8800-85c157042e3c
+Content-Type: application/json  
+Authorization: Bearer token..  
+
+{
+    "todo": "Updated Todo Title",
+    "status": "completed"
+}
+
+### 8. Delete a Todo
+DELETE http://localhost:3000/todos/454115a6-1bf0-4f27-8800-85c157042e3c  
+Authorization: Bearer token..  
+
+
